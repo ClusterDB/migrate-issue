@@ -22,12 +22,12 @@ struct LoggedIn: View {
       
       EmptyView()
         .sheet(isPresented: $showAdd) {
-          AddAddress(showAdd: $showAdd)
+          AddAddress(showAdd: $showAdd).environment(\.realmConfiguration, app.currentUser!.configuration(partitionValue: "user=\(app.currentUser!.id)"))
         }
       
       EmptyView()
         .sheet(isPresented: $showDetails) {
-          AddressDetail(address: $addressID)
+          AddressDetail(address: $addressID).environment(\.realmConfiguration, app.currentUser!.configuration(partitionValue: "user=\(app.currentUser!.id)"))
         }
       
       VStack{

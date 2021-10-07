@@ -15,7 +15,7 @@ class Address: Object, ObjectKeyIdentifiable {
   @Persisted var street: String = ""
   @Persisted var city: String = ""
     // TODO: Uncomment
-//  @Persisted var state: String? = ""
+  @Persisted var state: String? = ""
   
   convenience init(id: String,
                    partition: String,
@@ -30,7 +30,7 @@ class Address: Object, ObjectKeyIdentifiable {
     self.street = street
     self.city = city
       // TODO: Uncomment
-//    self.state = state
+    self.state = state
   }
 }
 
@@ -38,7 +38,7 @@ extension Address: Identifiable {
   var id: String { _id }
 }
 
-let app = App(id: "kurt-rhbjo" )
+let app = App(id: "kurt-rhbjo")
 
 struct ContentView: View {
   @State private var loggedIn = false
