@@ -15,7 +15,7 @@ class Address: Object, ObjectKeyIdentifiable {
   @Persisted var street: String = ""
   @Persisted var city: String = ""
     // TODO: Uncomment
-  @Persisted var state: String? = ""
+//  @Persisted var state: String? = ""
   
   convenience init(id: String,
                    partition: String,
@@ -30,7 +30,7 @@ class Address: Object, ObjectKeyIdentifiable {
     self.street = street
     self.city = city
       // TODO: Uncomment
-    self.state = state
+//    self.state = state
   }
 }
 

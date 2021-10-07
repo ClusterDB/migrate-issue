@@ -14,8 +14,6 @@ struct LoggedIn: View {
   @State private var showDetails = false
   @State private var addressID = ""
   
-    // TODO: Swap
-    // @ObservedResults(Address.self, configuration: Realm.Configuration(schemaVersion: 5)) var addresses
     @ObservedResults(Address.self) var addresses
   
     var body: some View {
